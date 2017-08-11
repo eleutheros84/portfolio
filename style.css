@@ -1,0 +1,126 @@
+@font-face {
+    font-family: Scratch;
+    src: url(Scratch_.ttf);
+}
+
+body, header, svg, div, p, a, h1, h2, img, figure{
+	margin: 0;
+	padding: 0;
+}
+
+/* header*/
+
+header{
+	z-index: 5;
+	width: 100%;
+	height: 12vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(250, 250, 250, 0.3);
+}
+
+header:hover{
+	background-color: rgba(250, 250, 250, 0.6);
+}
+
+.headerContainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-family: Scratch;
+}
+
+svg{
+	image: url(drawingcloud1.svg);
+}
+
+ul li{
+	list-style: none;
+	display: inline-block;
+}
+
+/* animated hamburger */
+		.hamburgerContainer {
+		    display: none;
+		    cursor: pointer;
+		    padding: 3vh 2vh;
+		}
+
+		.bar1, .bar2, .bar3 {
+		    width: 6vh;
+		    height: 1vh;
+		    background-color: rgba(0, 70, 100, 0.6);
+		    border-radius: 20%;
+		    margin: 0.8vh 0;
+		    transition: 0.4s;
+		}
+
+/* Rotate first bar */
+		.change .bar1 {
+		    -webkit-transform: rotate(-45deg) translate(-1.7vh, 1vh) ;
+		    transform: rotate(-45deg) translate(-1.7vh, 1vh) ;
+		}
+
+		/* Fade out the second bar */
+		.change .bar2 {
+		    opacity: 0;
+		}
+
+/* Rotate last bar */
+		.change .bar3 {
+		    -webkit-transform: rotate(45deg) translate(-1.4vh, -1vh) ;
+		    transform: rotate(45deg) translate(-1.4vh, -1vh) ;
+		}
+
+/* menu hamburger */
+		.menuHamburger{
+			z-index: 6;
+			display: inline-block;
+			position: fixed;
+			top: 12vh;
+			right: -100vw;
+			font-size: 3.5vh;
+			font-weight: bolder;
+			width: 100vw;
+			background-color: rgba(250, 250, 250, 0.6);
+			transition: 0.5s;	
+		}
+
+.change .menuHamburger{
+			transform:  translateX(-100vw);
+		}
+
+.menuHamburger a{
+			text-align: center;
+		}
+
+		.menuHamburger li a{
+			border-top: 1px solid rgba(0, 70, 100, 0.3);
+			padding: 1vh 0 1vh 0;
+		}
+
+/* menu widescreen*/
+		ul.menuWide{
+			display: inline-block;
+			margin: auto 0;
+			box-sizing: border-box;
+			font-size: 3.5vh;
+			font-weight: bolder;
+		}
+
+		.menuWide li a{
+			display: inline-block;
+			padding: 1vh 3vh;
+			box-sizing: border-box;
+		}
+
+.menuWide ul:hover, .menuHamburger ul:hover{
+			background-color: white;
+		}
+
+
+		.menuWide a, .menuHamburger a{
+			text-decoration: none;
+			color: rgba(0, 70, 100, 0.6);
+		}
