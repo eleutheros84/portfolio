@@ -17,7 +17,7 @@ header{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	font-family: Scratch;
+	font-family: sans-serif;
 	z-index: 5;
 	width: 100%;
 	height: 12vh;
@@ -36,10 +36,10 @@ header:hover{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	font-family: Scratch;
 }
 
 img{
+	z-index: 10;
 	height: 10vh;
 	width: auto;
 	padding: 1vh;
@@ -58,11 +58,12 @@ ul li{
 		}
 
 		.bar1, .bar2, .bar3 {
+			z-index: 10;
 		    width: 6vh;
-		    height: 1vh;
+		    height: 0.7vh;
 		    background-color: black;
-		    border-radius: 20%;
-		    margin: 0.8vh 0;
+		    border-radius: 50%;
+		    margin: 1.1vh 0;
 		    transition: 0.4s;
 		}
 
@@ -85,41 +86,49 @@ ul li{
 
 /* menu hamburger */
 		.menuHamburger{
-			z-index: 6;
-			display: inline-block;
+			display: block;
 			position: fixed;
-			top: 12vh;
-			right: -100vw;
-			font-size: 3.5vh;
+			top: -88vh;
+			right: 0vw;
+			font-size: 2.5vh;
 			font-weight: bolder;
 			width: 100vw;
-			background-color: rgba(250, 250, 250, 0.6);
+			height: 88vh;
+			background-color: yellow;
+			color: black;
 			transition: 0.5s;	
+			padding-top: 5vh;
+			box-sizing: border-box;
 		}
 
 .change .menuHamburger{
-			transform:  translateX(-100vw);
+			transform:  translateY(100vh); 
 		}
 
-.menuHamburger a{
+		.menuHamburger li{
 			text-align: center;
+			display: block;
+			padding: 4vh;
+			box-sizing: border-box;
+			
 		}
 
-		.menuHamburger li a{
-			border-top: 1px solid rgba(0, 70, 100, 0.3);
-			padding: 1vh 0 1vh 0;
-		}
+
+.menuHamburger li a{
+	
+}
 
 /* menu widescreen*/
 		ul.menuWide{
 			display: inline-block;
 			margin: auto 0;
 			box-sizing: border-box;
-			font-size: 2.5vh;
-			font-weight: bolder;
+			font-size: 2vh;
+			font-weight: bold;
 		}
 
 		.menuWide li a{
+			width: 18vh;
 			display: inline-block;
 			padding: 0 3vh;
 			border-left: 1px solid black;
@@ -132,9 +141,9 @@ ul li{
 
 
 		.menuWide a, .menuHamburger a{
+			text-align: center;
 			text-decoration: none;
 			color: black;
-			font-family: Scratch;
 		}
 
 
