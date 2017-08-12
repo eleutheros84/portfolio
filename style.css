@@ -38,11 +38,19 @@ header:hover{
 	justify-content: space-between;
 }
 
+#navCloud{
+	z-index: 10;
+	animation: 1s linear 0s infinite alternate move_cloud;
+	-webkit-animation: 1s linear 0s infinite alternate move_cloud;
+	-moz-animation: move_cloud 1s linear 0s infinite alternate;
+}
+
 img{
 	z-index: 10;
 	height: 10vh;
 	width: auto;
 	padding: 1vh;
+	
 }
 
 ul li{
@@ -146,6 +154,16 @@ ul li{
 			color: black;
 		}
 
+footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: black;
+	background-color: yellow;
+	width: 100vw;
+	min-height: 12vh;
+}
+
 
 @media screen and (max-width: 700px){
 	ul.menuWide{
@@ -154,4 +172,17 @@ ul li{
 	.hamburgerContainer{
 		display: inline-block;
 	}
+}
+
+@-webkit-keyframes move_cloud{ 
+	from{ margin-top: -0.5vh;} 
+	to{ margin-top: 0.5vh;}
+}
+@keyframes move_cloud{ 
+	from{ margin-top: -0.5vh;} 
+	to {margin-top: 0.5vh;}
+}
+@-moz-keyframes move_cloud{
+	from{margin-top: -0.5vh;}
+	to {margin-top: 0.5vh;}
 }
