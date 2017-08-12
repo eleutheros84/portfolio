@@ -3,7 +3,7 @@
     src: url(Scratch_.ttf);
 }
 
-body, header, svg, div, p, a, h1, h2, img, figure, ul, li{
+body, header, svg, div, p, a, h1, h2, img, figure, ul, li, footer{
 	margin: 0;
 	padding: 0;
 }
@@ -11,6 +11,9 @@ body, header, svg, div, p, a, h1, h2, img, figure, ul, li{
 /* header*/
 body{
 	background-color: black;
+	display: flex;
+	flex-direction: column;
+
 }
 
 header{
@@ -50,6 +53,7 @@ img{
 	height: 10vh;
 	width: auto;
 	padding: 1vh;
+	box-sizing: border-box;
 	
 }
 
@@ -73,6 +77,7 @@ ul li{
 		    border-radius: 50%;
 		    margin: 1.1vh 0;
 		    transition: 0.4s;
+		    box-sizing: border-box;
 		}
 
 /* Rotate first bar */
@@ -122,10 +127,6 @@ ul li{
 		}
 
 
-.menuHamburger li a{
-	
-}
-
 /* menu widescreen*/
 		ul.menuWide{
 			display: inline-block;
@@ -133,6 +134,7 @@ ul li{
 			box-sizing: border-box;
 			font-size: 2vh;
 			font-weight: bold;
+			box-sizing: border-box;
 		}
 
 		.menuWide li a{
@@ -154,13 +156,24 @@ ul li{
 			color: black;
 		}
 
+#main{
+	position: relative;
+	height: 100vh;
+	width: 100%
+	color: yellow;
+}
+
+#main h1{
+	position: relative;
+	top: 12vh;
+	color: yellow;
+}
+
 footer{
-	position: absolute;
-	bottom: 0;
-	left: 0;
+	position: relative
 	color: black;
 	background-color: yellow;
-	width: 100vw;
+	width: 100%
 	min-height: 12vh;
 }
 
