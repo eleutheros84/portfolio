@@ -43,9 +43,18 @@ header:hover{
 
 .navCloud{
 	z-index: 10;
-	animation: 1s linear 0s infinite alternate move_cloud;
-	-webkit-animation: 1s linear 0s infinite alternate move_cloud;
-	-moz-animation: move_cloud 1s linear 0s infinite alternate;
+}
+
+.floatingCloud1{
+	animation: 1s linear 0s infinite alternate move_cloud1;
+	-webkit-animation: 1s linear 0s infinite alternate move_cloud1;
+	-moz-animation: move_cloud1 1s linear 0s infinite alternate;
+}
+
+.floatingCloud2{
+	animation: 1s linear 0s infinite alternate move_cloud2;
+	-webkit-animation: 1s linear 0s infinite alternate move_cloud2;
+	-moz-animation: move_cloud2 1s linear 0s infinite alternate;
 }
 
 img{
@@ -190,7 +199,20 @@ div.storm1{
 }
 
 div.storm2{
+	z-index: 
 	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(images/StormNight2.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	opacity: 1;
+	animation:4s linear 0s normal forwards 3 lightning;
+    -webkit-animation:4s linear 0s normal forwards 3 lightning;
+    -moz-animation:4s linear 0s normal forwards 3 lightning;
 }
 
 #main h1{
@@ -243,15 +265,50 @@ footer p{
 }
 }
 
-@-webkit-keyframes move_cloud{ 
-	from{ margin-top: -0.5vh;} 
-	to{ margin-top: 0.5vh;}
+@-webkit-keyframes move_cloud1{ 
+	from{ margin-top: 0%;} 
+	to{ margin-top: 10%;}
 }
-@keyframes move_cloud{ 
-	from{ margin-top: -0.5vh;} 
-	to {margin-top: 0.5vh;}
+@keyframes move_cloud1{ 
+	from{ margin-top: 0%;} 
+	to {margin-top: 10%;}
 }
-@-moz-keyframes move_cloud{
-	from{margin-top: -0.5vh;}
-	to {margin-top: 0.5vh;}
+@-moz-keyframes move_cloud1{
+	from{margin-top: 0%;}
+	to {margin-top: 10%;}
+}
+
+@-webkit-keyframes move_cloud2{ 
+	from{ margin-top: 0%;} 
+	to{ margin-top: 2%;}
+}
+@keyframes move_cloud2{ 
+	from{ margin-top: 0%;} 
+	to {margin-top: 2%;}
+}
+@-moz-keyframes move_cloud2{
+	from{margin-top: 0%;}
+	to {margin-top: 2%;}
+}
+
+
+@keyframes lightning{
+   0%{opacity:0}
+    90%{opacity: 0}
+    95%{opacity:1}
+    100%{opacity:0}
+}
+
+@-webkit-keyframes lightning{
+   0%{opacity:0}
+    90%{opacity: 0}
+    95%{opacity:1}
+    100%{opacity:0}
+}
+
+@-moz-keyframes lightning{
+    0%{opacity:0}
+    90%{opacity: 0}
+    95%{opacity:1}
+    100%{opacity:0}
 }
