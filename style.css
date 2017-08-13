@@ -164,13 +164,35 @@ div#main{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-family: Scratch;
+	font-family: sans-serif;
 }
 
-#main img{
+div.cloud2{
+	position: absolute;
+	top: 20vh;
+	left: 25vw;
+	width: 50%;
+	height: auto;
+}
+
+img.cloud2{
 	z-index: 0;
 	width: 100%;
 	height: auto;
+}
+
+
+img.storm1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100vh;
+}
+
+img.storm2{
+	display: none;
 }
 
 #main h1{
@@ -213,6 +235,14 @@ footer p{
 	.hamburgerContainer{
 		display: inline-block;
 	}
+
+	div.cloud2{
+	position: absolute;
+	top: 30vh;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
 }
 
 @-webkit-keyframes move_cloud{ 
