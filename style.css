@@ -208,18 +208,24 @@ div.sizingLetters{
 	position: absolute;
 }
 
+.codeRays1{
+	animation: anim_letters1 1s linear 0s infinite alternate;
+	-webkit-animation: anim_letters1 1s linear 0s infinite alternate;
+	-moz-animation: anim_letters1 1s linear 0s infinite alternate;
+}
+
 .ray1{
-	top: 28%;
-	left: -5%;
+	top: 25%;
+	left: 0%;
 }
 
 .ray1 span{
 	position: absolute;
 	top: 0;
 	left: 0;
-	-moz-transform: rotate(-150deg); /* IE 9 */
-    -webkit-transform: rotate(-150deg); /* Chrome, Safari, Opera */
-    transform: rotate(-150deg);
+	-moz-transform: rotate(-140deg); /* IE 9 */
+    -webkit-transform: rotate(-140deg); /* Chrome, Safari, Opera */
+    transform: rotate(-140deg);
 }
 .ray2{
 	top: 5%;
@@ -237,21 +243,21 @@ div.sizingLetters{
 }
 
 .ray3{
-	top: -5%;
-	left: 10%;
+	top: 2%;
+	left: 18%;
 }
 
 .ray3 span{
 	position: absolute;
 	top: 0;
 	left: 0;
-	-moz-transform: rotate(-110deg); 
-    -webkit-transform: rotate(-110deg); /* Chrome, Safari, Opera */
-    transform: rotate(-110deg);
+	-moz-transform: rotate(-115deg); 
+    -webkit-transform: rotate(-115deg); /* Chrome, Safari, Opera */
+    transform: rotate(-115deg);
 }
 
 .ray4{
-	top: -10%;
+	top: -12%;
 	left: 20%;
 }
 
@@ -259,27 +265,27 @@ div.sizingLetters{
 	position: absolute;
 	top: 0;
 	left: 0;
-	-moz-transform: rotate(-100deg); 
-    -webkit-transform: rotate(-100deg); /* Chrome, Safari, Opera */
-    transform: rotate(-100deg);
+	-moz-transform: rotate(-107deg); 
+    -webkit-transform: rotate(-107deg); /* Chrome, Safari, Opera */
+    transform: rotate(-107deg);
 }
 
 .ray5{
-	top: -15%;
-	left: 30%;
+	top: -9%;
+	left: 36%;
 }
 
 .ray5 span{
 	position: absolute;
 	top: 0;
 	left: 0;
-	-moz-transform: rotate(-90deg); 
-    -webkit-transform: rotate(-90deg); 
-    transform: rotate(-90deg);
+	-moz-transform: rotate(-99deg); 
+    -webkit-transform: rotate(-99deg); 
+    transform: rotate(-99deg);
 }
 
 .ray6{
-	top: -10%;
+	top: -18%;
 	left: 40%;
 }
 
@@ -287,27 +293,27 @@ div.sizingLetters{
 	position: absolute;
 	top: 0;
 	left: 0;
-	-moz-transform: rotate(-80deg); 
-    -webkit-transform: rotate(-80deg); 
-    transform: rotate(-80deg);
+	-moz-transform: rotate(-92deg); 
+    -webkit-transform: rotate(-92deg); 
+    transform: rotate(-92deg);
 }
 
 .ray7{
-	top: -10%;
-	left: 50%;
+	top: -12%;
+	left: 56%;
 }
 
 .ray7 span{
 	position: absolute;
 	top: 0;
 	left: 0;
-	-moz-transform: rotate(-70deg); 
-    -webkit-transform: rotate(-70deg); 
-    transform: rotate(-70deg);
+	-moz-transform: rotate(-84deg); 
+    -webkit-transform: rotate(-84deg); 
+    transform: rotate(-84deg);
 }
 
 .ray8{
-	top: 0;
+	top: -17%;
 	left: 60%;
 }
 
@@ -315,41 +321,41 @@ div.sizingLetters{
 	position: absolute;
 	top: 0;
 	left: 0;
-	-moz-transform: rotate(-60deg); 
-    -webkit-transform: rotate(-60deg); 
-    transform: rotate(-60deg);
+	-moz-transform: rotate(-78deg); 
+    -webkit-transform: rotate(-78deg); 
+    transform: rotate(-78deg);
 }
 
 .ray9{
-	top: 10%;
-	left: 70%;
+	top: -6%;
+	left: 74%;
 }
 
 .ray9 span{
 	position: absolute;
 	top: 0;
 	left: 0;
-	-moz-transform: rotate(-50deg); 
-    -webkit-transform: rotate(-50deg); 
-    transform: rotate(-50deg);
+	-moz-transform: rotate(-69deg); 
+    -webkit-transform: rotate(-69deg); 
+    transform: rotate(-69deg);
 }
 
 .ray10{
-	top: 20%;
-	left: 80%;
+	top: -5%;
+	left: 78%;
 }
 
 .ray10 span{
 	position: absolute;
 	top: 0;
 	left: 0;
-	-moz-transform: rotate(-40deg); 
-    -webkit-transform: rotate(-40deg); 
-    transform: rotate(-40deg);
+	-moz-transform: rotate(-59deg); 
+    -webkit-transform: rotate(-59deg); 
+    transform: rotate(-59deg);
 }
 
 .ray11{
-	top: 30%;
+	top: 13%;
 	left: 90%;
 }
 
@@ -357,9 +363,9 @@ div.sizingLetters{
 	position: absolute;
 	top: 0;
 	left: 0;
-	-moz-transform: rotate(-30deg); 
-    -webkit-transform: rotate(-30deg); 
-    transform: rotate(-30deg);
+	-moz-transform: rotate(-49deg); 
+    -webkit-transform: rotate(-49deg); 
+    transform: rotate(-49deg);
 }
 
 div.storm1{
@@ -382,9 +388,9 @@ div.storm2{
 	height: 100vh;
 	width: 100%;
 	opacity: 1;
-	animation:4s linear 0s normal forwards 3 lightning;
-    -webkit-animation:4s linear 0s normal forwards 3 lightning;
-    -moz-animation:4s linear 0s normal forwards 3 lightning;
+	animation:4s linear 0s normal forwards infinite lightning;
+    -webkit-animation:4s linear 0s normal forwards infinite lightning;
+    -moz-animation:4s linear 0s normal forwards infinite lightning;
 }
 
 #main h1{
@@ -459,28 +465,6 @@ footer p{
     100%{opacity:1;}
 }
 
-
-@keyframes size_cloud2{
-	0%{width: 10%; height: auto;}
-	80%{width: 20%;height: auto;}
-	90%{width: 30%; height: auto;}
-	100%{width: 100%; height: auto;}
-}
-
-@-webkit-keyframes size_cloud2{
-	0%{width: 10%; height: auto;}
-	80%{width: 20%;height: auto;}
-	90%{width: 30%; height: auto;}
-	100%{width: 100%; height: auto;}
-}
-
-@-moz-keyframes size_cloud2{
-	0%{width: 10%; height: auto;}
-	80%{width: 20%;height: auto;}
-	90%{width: 30%; height: auto;}
-	100%{width: 100%; height: auto;}
-}
-
 @keyframes size_letters{
 	0%{transform: scale(0.1, 0.1) translate(-450vw, 450vh);}
 	80%{transform: scale(0.2, 0.2) translate(200vw, -100vh) ;}
@@ -501,28 +485,6 @@ footer p{
 	90%{transform: scale(0.3, 0.3) translate(-100vw, 0vh);}
 	100%{transform: scale(1, 1);}
 }
-
-@keyframes size_letters2{
-	0%{transform: scale(0.05, 0.05);}
-	80%{transform: scale(0.1, 0.1);}
-	90%{transform: scale(0.15, 0.15);}
-	100%{transform: scale(0.5, 0.5);}
-}
-
-@-webkit-keyframes size_letters2{
-	0%{transform: scale(0.05, 0.05);}
-	80%{transform: scale(0.1, 0.1);}
-	90%{transform: scale(0.15, 0.15);}
-	100%{transform: scale(0.5, 0.5);}
-}
-
-@-moz-keyframes size_letters2{
-	0%{transform: scale(0.05, 0.05);}
-	80%{transform: scale(0.1, 0.1);}
-	90%{transform: scale(0.15, 0.15);}
-	100%{transform: scale(0.5, 0.5);}
-}
-
 
 @keyframes lightning{
    0%{opacity:0;}
@@ -565,17 +527,4 @@ footer p{
 @-moz-keyframes move_cloud1{
 	from{margin-top: 0%;}
 	to {margin-top: 10%;}
-}
-
-@-webkit-keyframes move_cloud2{ 
-	from{ margin-top: 0%;} 
-	to{ margin-top: 2%;}
-}
-@keyframes move_cloud2{ 
-	from{ margin-top: 0%;} 
-	to {margin-top: 2%;}
-}
-@-moz-keyframes move_cloud2{
-	from{margin-top: 0%;}
-	to {margin-top: 2%;}
 }
