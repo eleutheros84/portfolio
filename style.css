@@ -1,6 +1,11 @@
 @font-face {
     font-family: Scratch;
-    src: url(Scratch_.ttf);
+    src: url(fonts/Scratch_.ttf);
+}
+
+@font-face {
+    font-family: Handlee;
+    src: url(fonts/handlee-regular.ttf);
 }
 
 body, header, svg, div, p, a, h1, h2, img, figure, ul, li, footer{
@@ -20,7 +25,7 @@ header{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	font-family: sans-serif;
+	font-family: Handlee;
 	z-index: 9;
 	width: 100%;
 	height: 12vh;
@@ -33,9 +38,9 @@ header{
 
 .headerDelay{
 	opacity: 1;
-	animation: header_delay 12s linear 0s 1 forwards ;
-	-webkit-animation: header_delay 12s linear 0s 1 forwards ;
-	-moz-animation: header_delay 12s linear 0s 1 forwards;
+	animation: header_delay 3s linear 0s 1 forwards ;
+	-webkit-animation: header_delay 3s linear 0s 1 forwards ;
+	-moz-animation: header_delay 3s linear 0s 1 forwards;
 }
 
 header:hover{
@@ -58,7 +63,7 @@ header:hover{
 	-moz-animation: move_cloud1 1s linear 0s infinite alternate;
 }
 
-img{
+header img{
 	z-index: 10;
 	height: 10vh;
 	width: auto;
@@ -109,6 +114,7 @@ ul li{
 
 /* menu hamburger */
 		.menuHamburger{
+			z-index: 1;
 			display: block;
 			position: fixed;
 			top: -100vh;
@@ -177,7 +183,6 @@ div#main{
 	font-family: sans-serif;
 }
 
-
 div.cloud2{
 	z-index: 1;
 	position: absolute;
@@ -190,183 +195,15 @@ div.cloud2{
 img.cloud2{
 	width: 100%;
 	height: auto;
+	opacity: 1;
 }
 
-.sizingCloud2{
-	animation: size_cloud2 12s linear 0s 1 forwards;
-	-webkit-animation: size_cloud2 12s linear 0s 1 forwards;
-	-moz-animation: size_cloud2 12s linear 0s 1 forwards;
+div.movingCloud2{	
+	animation: moving_cloud2 3s linear 0s 1 forwards;
+	-webkit-animation: moving_cloud2 3s linear 0s 1 forwards;
+	-moz-animation: moving_cloud2 3s linear 0s 1 forwards;
 }
 
-div.sizingLetters{	
-	animation: size_letters 12s linear 0s 1 forwards;
-	-webkit-animation: size_letters 12s linear 0s 1 forwards;
-	-moz-animation: size_letters 12s linear 0s 1 forwards;
-}
-
-.codeRays1, .codeRays2{
-	position: absolute;
-}
-
-.codeRays1{
-	animation: anim_letters1 1s linear 0s infinite alternate;
-	-webkit-animation: anim_letters1 1s linear 0s infinite alternate;
-	-moz-animation: anim_letters1 1s linear 0s infinite alternate;
-}
-
-.ray1{
-	top: 25%;
-	left: 0%;
-}
-
-.ray1 span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	-moz-transform: rotate(-140deg); /* IE 9 */
-    -webkit-transform: rotate(-140deg); /* Chrome, Safari, Opera */
-    transform: rotate(-140deg);
-}
-.ray2{
-	top: 5%;
-	left: 0;
-	 
-}
-
-.ray2 span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	-moz-transform: rotate(-130deg); /* IE 9 */
-    -webkit-transform: rotate(-130deg); /* Chrome, Safari, Opera */
-    transform: rotate(-130deg);
-}
-
-.ray3{
-	top: 2%;
-	left: 18%;
-}
-
-.ray3 span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	-moz-transform: rotate(-115deg); 
-    -webkit-transform: rotate(-115deg); /* Chrome, Safari, Opera */
-    transform: rotate(-115deg);
-}
-
-.ray4{
-	top: -12%;
-	left: 20%;
-}
-
-.ray4 span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	-moz-transform: rotate(-107deg); 
-    -webkit-transform: rotate(-107deg); /* Chrome, Safari, Opera */
-    transform: rotate(-107deg);
-}
-
-.ray5{
-	top: -9%;
-	left: 36%;
-}
-
-.ray5 span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	-moz-transform: rotate(-99deg); 
-    -webkit-transform: rotate(-99deg); 
-    transform: rotate(-99deg);
-}
-
-.ray6{
-	top: -18%;
-	left: 40%;
-}
-
-.ray6 span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	-moz-transform: rotate(-92deg); 
-    -webkit-transform: rotate(-92deg); 
-    transform: rotate(-92deg);
-}
-
-.ray7{
-	top: -12%;
-	left: 56%;
-}
-
-.ray7 span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	-moz-transform: rotate(-84deg); 
-    -webkit-transform: rotate(-84deg); 
-    transform: rotate(-84deg);
-}
-
-.ray8{
-	top: -17%;
-	left: 60%;
-}
-
-.ray8 span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	-moz-transform: rotate(-78deg); 
-    -webkit-transform: rotate(-78deg); 
-    transform: rotate(-78deg);
-}
-
-.ray9{
-	top: -6%;
-	left: 74%;
-}
-
-.ray9 span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	-moz-transform: rotate(-69deg); 
-    -webkit-transform: rotate(-69deg); 
-    transform: rotate(-69deg);
-}
-
-.ray10{
-	top: -5%;
-	left: 78%;
-}
-
-.ray10 span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	-moz-transform: rotate(-59deg); 
-    -webkit-transform: rotate(-59deg); 
-    transform: rotate(-59deg);
-}
-
-.ray11{
-	top: 13%;
-	left: 90%;
-}
-
-.ray11 span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	-moz-transform: rotate(-49deg); 
-    -webkit-transform: rotate(-49deg); 
-    transform: rotate(-49deg);
-}
 
 div.storm1{
 	background-image: url(images/StormNight1.png);
@@ -391,20 +228,56 @@ div.storm2{
     -moz-animation:4s linear 0s normal forwards infinite lightning;
 }
 
-#main h1{
+.home1{
+	z-index: 2;
 	position: absolute;
-	top: 70vh;
+	top: 0;
 	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+img.photoMe{
+	/*position: absolute;
+	top: 30vh;
+	left: 20vw;*/
+	height: 40vh;
+	width: auto;
+	border-radius: 5%;
+	margin: auto;
+	margin-top: 25vh;
+	box-sizing: border-box;
+}
+
+.home2{
+	margin: auto;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+#main h1, #main h2{
+	font-family: Handlee;
+}
+
+#main h1{
+	/*position: absolute;
+	top: 70vh;
+	left: 0;*/
 	width: 100%;
 	height: 10vh;
 	color: yellow;
 	text-align: center;
+	font-size: 4.2vh;
 }
 
 #main h2{
-	position: absolute;
+	/*position: absolute;
 	top: 80vh;
-	left: 0;
+	left: 0;*/
 	width: 100%;
 	height: 10vh;
 	color: yellow;
@@ -423,28 +296,6 @@ footer p{
 	font-weight: bolder;
 }
 
-@media screen and (max-width: 640px){
-	ul.menuWide{
-		display: none;
-	}
-	.hamburgerContainer{
-		display: inline-block;
-	}
-
-	div.cloud2{
-	position: absolute;
-	top: 30%;
-	left: 15%;
-	width: 70%;
-	height: auto;
-	box-sizing: border-box;
-	}
-
-	.cloud2 span{
-		font-size: 30%;
-	}
-}
-
 @keyframes header_delay{
    0%{opacity:0;}
     95%{opacity:0;}
@@ -463,26 +314,27 @@ footer p{
     100%{opacity:1;}
 }
 
-@keyframes size_letters{
+@-webkit-keyframes moving_cloud2{
 	0%{transform: scale(0.1, 0.1) translate(-450vw, 450vh);}
 	80%{transform: scale(0.2, 0.2) translate(200vw, -100vh) ;}
 	90%{transform: scale(0.3, 0.3) translate(-100vw, 0vh);}
 	100%{transform: scale(1, 1);}
 }
 
-@-webkit-keyframes size-letters{
+@-moz-keyframes moving_cloud2{
 	0%{transform: scale(0.1, 0.1) translate(-450vw, 450vh);}
 	80%{transform: scale(0.2, 0.2) translate(200vw, -100vh) ;}
 	90%{transform: scale(0.3, 0.3) translate(-100vw, 0vh);}
 	100%{transform: scale(1, 1);}
 }
 
-@-moz-keyframes size-letters{
+@keyframes moving_cloud2{
 	0%{transform: scale(0.1, 0.1) translate(-450vw, 450vh);}
 	80%{transform: scale(0.2, 0.2) translate(200vw, -100vh) ;}
-	90%{transform: scale(0.3, 0.3) translate(-100vw, 0vh);}
-	100%{transform: scale(1, 1);}
+	90%{transform: scale(0.3, 0.3) translate(-100vw, 0vh); opacity: 1;}
+	100%{transform: scale(1, 1); opacity: 0;}
 }
+
 
 @keyframes lightning{
    0%{opacity:0;}
@@ -525,4 +377,26 @@ footer p{
 @-moz-keyframes move_cloud1{
 	from{margin-top: 0;}
 	to {margin-top: 1vh;}
+}
+
+@media screen and (max-width: 640px){
+	ul.menuWide{
+		display: none;
+	}
+	.hamburgerContainer{
+		display: inline-block;
+	}
+
+	div.cloud2{
+	position: absolute;
+	top: 30%;
+	left: 15%;
+	width: 70%;
+	height: auto;
+	box-sizing: border-box;
+	}
+
+	.cloud2 span{
+		font-size: 30%;
+	}
 }
