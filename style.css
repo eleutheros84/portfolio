@@ -38,9 +38,9 @@ header{
 
 .headerDelay{
 	opacity: 1;
-	animation: header_delay 3s linear 0s 1 forwards ;
-	-webkit-animation: header_delay 3s linear 0s 1 forwards ;
-	-moz-animation: header_delay 3s linear 0s 1 forwards;
+	animation: header_delay 7s linear 0s 1 forwards ;
+	-webkit-animation: header_delay 7s linear 0s 1 forwards ;
+	-moz-animation: header_delay 7s linear 0s 1 forwards;
 }
 
 header:hover{
@@ -187,9 +187,9 @@ section#main{
 div.cloud2{
 	z-index: 1;
 	position: absolute;
-	top: 30%;
+	top: 40vh !important;
 	left: 30%;
-	width: 40%;
+	width: 100%;
 	height: auto;
 }
 
@@ -200,9 +200,9 @@ img.cloud2{
 }
 
 div.movingCloud2{	
-	animation: moving_cloud2 3s linear 0s 1 forwards;
-	-webkit-animation: moving_cloud2 3s linear 0s 1 forwards;
-	-moz-animation: moving_cloud2 3s linear 0s 1 forwards;
+	animation: moving_cloud2 7s linear 0s 1 forwards;
+	-webkit-animation: moving_cloud2 7s linear 0s 1 forwards;
+	-moz-animation: moving_cloud2 7s linear 0s 1 forwards;
 }
 
 
@@ -330,42 +330,55 @@ footer p{
 }
 
 @keyframes moving_cloud2{
-	0%{transform: scale(0.1, 0.1) translate(-450vw, 450vh);}
-	80%{transform: scale(0.2, 0.2) translate(200vw, -100vh) ;}
-	90%{transform: scale(0.3, 0.3) translate(-100vw, 0vh); opacity: 1;}
-	100%{transform: scale(1, 1); opacity: 0;}
+	0%{transform: scale(0.2, 0.2) translate(-450vw, 450vh);}
+	20%{transform: scale(0.4, 0.4) translate(10vw, -30vh);}
+	40%{transform: scale(1, 1) translate(-100vw, -100vh);}
+	41%{transform: scale(0.2, 0.2) translate(100vw, -250vh);}
+	60%{transform: scale(0.4, 0.4) translate(-50vw, 30vh);}
+	80%{transform: scale(1, 1) translate(150vw, 40vh);}
+	81%{transform: scale(0.2, 0.2) translate(-150vw, -200vh) ;}
+	90%{transform: scale(3, 3);/* translate(-100vw, 0vh); */opacity: 1;}
+	98%{transform: scale(4, 4); opacity: 0;}
+	100%{transform: scale(0, 0); opacity: 0;}
 }
 
-
-@keyframes lightning{
-   0%{opacity:0;}
-    15%{opacity: 0;}
-    16%{opacity: 1;}
-    18%{opacity: 0;}
-    94%{opacity: 0;}
-    95%{opacity:1;}
-    100%{opacity:0;}
-}
 
 @-webkit-keyframes lightning{
-    0%{opacity:0;}
-    15%{opacity: 0;}
-    16%{opacity: 1;}
-    18%{opacity: 0;}
-    94%{opacity: 0;}
-    95%{opacity:1;}
-    100%{opacity:0;}
+   0%{opacity:0;}
+   2%{opacity: 1;}
+   4%{opacity: 0;}
+   35%{opacity: 0;}
+   36%{opacity: 1;}
+   48%{opacity: 0;}
+   84%{opacity: 0;}
+   85%{opacity:1;}
+   100%{opacity:0;}
 }
 
 @-moz-keyframes lightning{
-    0%{opacity:0;}
-    15%{opacity: 0;}
-    16%{opacity: 1;}
-    18%{opacity: 0;}
-    94%{opacity: 0;}
-    95%{opacity:1;}
-    100%{opacity:0;}
+   0%{opacity:0;}
+   2%{opacity: 1;}
+   4%{opacity: 0;}
+   35%{opacity: 0;}
+   36%{opacity: 1;}
+   48%{opacity: 0;}
+   84%{opacity: 0;}
+   85%{opacity:1;}
+   100%{opacity:0;}
 }
+
+@keyframes lightning{
+   0%{opacity:0;}
+   2%{opacity: 1;}
+   4%{opacity: 0;}
+   35%{opacity: 0;}
+   36%{opacity: 1;}
+   48%{opacity: 0;}
+   84%{opacity: 0;}
+   85%{opacity:1;}
+   100%{opacity:0;}
+}
+
 
 @-webkit-keyframes move_cloud1{ 
 	from{margin-top: 0;} 
