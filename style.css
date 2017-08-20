@@ -206,7 +206,7 @@ div.movingCloud2{
 
 
 div.storm1{
-	background-image: url(images/StormNight1.png);
+	background-image: url(images/StormNight1-compressor.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
@@ -217,7 +217,7 @@ div.storm2{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: url(images/StormNight2.png);
+	background-image: url(images/StormNight2-compressor.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
