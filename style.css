@@ -86,7 +86,7 @@ ul li{
 		}
 
 		.bar1, .bar2, .bar3 {
-			z-index: 11;
+			z-index: 12;
 		    width: 6vh;
 		    height: 0.7vh;
 		    background-color: yellow;
