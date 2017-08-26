@@ -225,7 +225,7 @@ div.storm2{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: url(images/StormNight2-compressor.png);
+	background-image: url(images/StormNight2.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
@@ -294,17 +294,16 @@ img.photoMe{
 footer{
 	position: relative
 	color: black;
-	background: grey; 
-    background: -webkit-linear-gradient(white, black); 
-    background: -o-linear-gradient(white, black); 
-   	background: -moz-linear-gradient(white, black);
-   	background: linear-gradient(white, black); 
+	background: darkgrey; 
 	width: 100%;
 	min-height: 12vh;
 }
 
 footer p{
+	padding: 2vh;
 	font-weight: bolder;
+	text-align: center;
+	box-sizing: border-box;
 }
 
 @-webkit-keyframes header_delay{

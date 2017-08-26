@@ -19,9 +19,9 @@
   <defs
      id="defs2">
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38"
        y="-0.2"
@@ -231,12 +231,185 @@
          result="result93" />
       <feComposite
          in2="result7"
-         id="feComposite4370" />
+         id="feComposite4370"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5550" />
+      <feColorMatrix
+         id="feColorMatrix5552"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5554"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5556"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5558"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5560"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5562"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5564"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5566"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5568"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5570"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5572"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5574"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5576"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5578"
+         operator="in"
+         in="result2"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5580" />
+      <feColorMatrix
+         id="feColorMatrix5582"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5584"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5586"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5588"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5590"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5592"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5594"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5596"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5598"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5600"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5602"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5604"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5606"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5608"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-7"
        y="-0.2"
@@ -378,12 +551,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4398" />
+         id="feComposite4398"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5610" />
+      <feColorMatrix
+         id="feColorMatrix5612"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5614"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5616"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5618"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5620"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5622"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5624"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5626"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5628"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5630"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5632"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5634"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5636"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5638"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-9"
        y="-0.2"
@@ -525,12 +785,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4426" />
+         id="feComposite4426"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5640" />
+      <feColorMatrix
+         id="feColorMatrix5642"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5644"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5646"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5648"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5650"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5652"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5654"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5656"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5658"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5660"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5662"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5664"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5666"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5668"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-0"
        y="-0.2"
@@ -672,12 +1019,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4454" />
+         id="feComposite4454"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5670" />
+      <feColorMatrix
+         id="feColorMatrix5672"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5674"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5676"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5678"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5680"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5682"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5684"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5686"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5688"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5690"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5692"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5694"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5696"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5698"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8"
        y="-0.2"
@@ -819,12 +1253,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4482" />
+         id="feComposite4482"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5700" />
+      <feColorMatrix
+         id="feColorMatrix5702"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5704"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5706"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5708"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5710"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5712"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5714"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5716"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5718"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5720"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5722"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5724"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5726"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5728"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-9"
        y="-0.2"
@@ -966,12 +1487,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4510" />
+         id="feComposite4510"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5730" />
+      <feColorMatrix
+         id="feColorMatrix5732"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5734"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5736"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5738"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5740"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5742"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5744"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5746"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5748"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5750"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5752"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5754"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5756"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5758"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4"
        y="-0.2"
@@ -1113,12 +1721,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4538" />
+         id="feComposite4538"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5760" />
+      <feColorMatrix
+         id="feColorMatrix5762"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5764"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5766"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5768"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5770"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5772"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5774"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5776"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5778"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5780"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5782"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5784"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5786"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5788"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-5"
        y="-0.2"
@@ -1260,12 +1955,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4566" />
+         id="feComposite4566"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5790" />
+      <feColorMatrix
+         id="feColorMatrix5792"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5794"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5796"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5798"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5800"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5802"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5804"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5806"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5808"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5810"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5812"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5814"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5816"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5818"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3"
        y="-0.2"
@@ -1407,12 +2189,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4594" />
+         id="feComposite4594"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5820" />
+      <feColorMatrix
+         id="feColorMatrix5822"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5824"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5826"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5828"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5830"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5832"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5834"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5836"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5838"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5840"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5842"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5844"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5846"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5848"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-3"
        y="-0.2"
@@ -1554,12 +2423,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4622" />
+         id="feComposite4622"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5850" />
+      <feColorMatrix
+         id="feColorMatrix5852"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5854"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5856"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5858"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5860"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5862"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5864"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5866"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5868"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5870"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5872"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5874"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5876"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5878"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-1"
        y="-0.2"
@@ -1701,12 +2657,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4650" />
+         id="feComposite4650"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5880" />
+      <feColorMatrix
+         id="feColorMatrix5882"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5884"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5886"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5888"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5890"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5892"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5894"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5896"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5898"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5900"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5902"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5904"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5906"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5908"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-35"
        y="-0.2"
@@ -1848,12 +2891,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4678" />
+         id="feComposite4678"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5910" />
+      <feColorMatrix
+         id="feColorMatrix5912"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5914"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5916"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5918"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5920"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5922"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5924"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5926"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5928"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5930"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5932"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5934"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5936"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5938"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-9"
        y="-0.2"
@@ -1995,12 +3125,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4706" />
+         id="feComposite4706"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5940" />
+      <feColorMatrix
+         id="feColorMatrix5942"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5944"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5946"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5948"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5950"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5952"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5954"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5956"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5958"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5960"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5962"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5964"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5966"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5968"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-6"
        y="-0.2"
@@ -2142,12 +3359,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4734" />
+         id="feComposite4734"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5970" />
+      <feColorMatrix
+         id="feColorMatrix5972"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5974"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5976"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5978"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5980"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5982"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5984"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5986"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5988"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5990"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5992"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5994"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5996"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5998"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-0"
        y="-0.2"
@@ -2289,12 +3593,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4762" />
+         id="feComposite4762"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6000" />
+      <feColorMatrix
+         id="feColorMatrix6002"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6004"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6006"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6008"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6010"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6012"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6014"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6016"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6018"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6020"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6022"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6024"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6026"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6028"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-63"
        y="-0.2"
@@ -2436,12 +3827,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4790" />
+         id="feComposite4790"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6030" />
+      <feColorMatrix
+         id="feColorMatrix6032"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6034"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6036"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6038"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6040"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6042"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6044"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6046"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6048"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6050"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6052"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6054"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6056"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6058"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-91"
        y="-0.2"
@@ -2583,12 +4061,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4818" />
+         id="feComposite4818"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6060" />
+      <feColorMatrix
+         id="feColorMatrix6062"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6064"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6066"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6068"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6070"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6072"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6074"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6076"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6078"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6080"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6082"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6084"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6086"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6088"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-4"
        y="-0.2"
@@ -2730,12 +4295,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4846" />
+         id="feComposite4846"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6090" />
+      <feColorMatrix
+         id="feColorMatrix6092"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6094"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6096"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6098"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6100"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6102"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6104"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6106"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6108"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6110"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6112"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6114"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6116"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6118"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-5"
        y="-0.2"
@@ -2877,12 +4529,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4874" />
+         id="feComposite4874"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6120" />
+      <feColorMatrix
+         id="feColorMatrix6122"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6124"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6126"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6128"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6130"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6132"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6134"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6136"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6138"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6140"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6142"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6144"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6146"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6148"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-98"
        y="-0.2"
@@ -3024,12 +4763,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4902" />
+         id="feComposite4902"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6150" />
+      <feColorMatrix
+         id="feColorMatrix6152"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6154"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6156"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6158"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6160"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6162"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6164"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6166"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6168"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6170"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6172"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6174"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6176"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6178"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-19"
        y="-0.2"
@@ -3171,12 +4997,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4930" />
+         id="feComposite4930"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6180" />
+      <feColorMatrix
+         id="feColorMatrix6182"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6184"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6186"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6188"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6190"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6192"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6194"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6196"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6198"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6200"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6202"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6204"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6206"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6208"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-45"
        y="-0.2"
@@ -3318,12 +5231,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4958" />
+         id="feComposite4958"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6210" />
+      <feColorMatrix
+         id="feColorMatrix6212"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6214"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6216"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6218"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6220"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6222"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6224"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6226"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6228"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6230"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6232"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6234"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6236"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6238"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-51"
        y="-0.2"
@@ -3465,12 +5465,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite4986" />
+         id="feComposite4986"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6240" />
+      <feColorMatrix
+         id="feColorMatrix6242"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6244"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6246"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6248"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6250"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6252"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6254"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6256"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6258"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6260"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6262"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6264"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6266"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6268"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-7"
        y="-0.2"
@@ -3612,12 +5699,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite5014" />
+         id="feComposite5014"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6270" />
+      <feColorMatrix
+         id="feColorMatrix6272"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6274"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6276"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6278"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6280"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6282"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6284"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6286"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6288"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6290"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6292"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6294"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6296"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6298"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-8"
        y="-0.2"
@@ -3759,12 +5933,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite5042" />
+         id="feComposite5042"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6300" />
+      <feColorMatrix
+         id="feColorMatrix6302"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6304"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6306"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6308"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6310"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6312"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6314"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6316"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6318"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6320"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6322"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6324"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6326"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6328"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-10"
        y="-0.2"
@@ -3906,12 +6167,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite5070" />
+         id="feComposite5070"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6330" />
+      <feColorMatrix
+         id="feColorMatrix6332"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6334"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6336"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6338"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6340"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6342"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6344"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6346"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6348"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6350"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6352"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6354"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6356"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6358"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-81"
        y="-0.2"
@@ -4053,12 +6401,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite5098" />
+         id="feComposite5098"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6360" />
+      <feColorMatrix
+         id="feColorMatrix6362"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6364"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6366"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6368"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6370"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6372"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6374"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6376"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6378"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6380"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6382"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6384"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6386"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6388"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-01"
        y="-0.2"
@@ -4200,12 +6635,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite5126" />
+         id="feComposite5126"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6390" />
+      <feColorMatrix
+         id="feColorMatrix6392"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6394"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6396"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6398"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6400"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6402"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6404"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6406"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6408"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6410"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6412"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6414"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6416"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6418"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-01-3"
        y="-0.2"
@@ -4347,12 +6869,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite5154" />
+         id="feComposite5154"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6420" />
+      <feColorMatrix
+         id="feColorMatrix6422"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6424"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6426"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6428"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6430"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6432"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6434"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6436"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6438"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6440"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6442"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6444"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6446"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6448"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-01-36"
        y="-0.2"
@@ -4494,12 +7103,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite5182" />
+         id="feComposite5182"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6450" />
+      <feColorMatrix
+         id="feColorMatrix6452"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6454"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6456"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6458"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6460"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6462"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6464"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6466"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6468"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6470"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6472"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6474"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6476"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6478"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-01-7"
        y="-0.2"
@@ -4641,12 +7337,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite5210" />
+         id="feComposite5210"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6480" />
+      <feColorMatrix
+         id="feColorMatrix6482"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6484"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6486"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6488"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6490"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6492"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6494"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6496"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6498"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6500"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6502"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6504"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6506"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6508"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-01-5"
        y="-0.2"
@@ -4788,12 +7571,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite5238" />
+         id="feComposite5238"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6510" />
+      <feColorMatrix
+         id="feColorMatrix6512"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6514"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6516"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6518"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6520"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6522"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6524"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6526"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6528"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6530"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6532"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6534"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6536"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6538"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-01-8"
        y="-0.2"
@@ -4935,12 +7805,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite5266" />
+         id="feComposite5266"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6540" />
+      <feColorMatrix
+         id="feColorMatrix6542"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6544"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6546"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6548"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6550"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6552"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6554"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6556"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6558"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6560"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6562"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6564"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6566"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6568"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-01-2"
        y="-0.2"
@@ -5082,12 +8039,99 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite5294" />
+         id="feComposite5294"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6570" />
+      <feColorMatrix
+         id="feColorMatrix6572"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6574"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6576"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6578"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6580"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6582"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6584"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6586"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6588"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6590"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6592"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6594"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6596"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6598"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter38-8-4-3-01-7-6"
        y="-0.2"
@@ -5229,16 +8273,103 @@
          result="result92" />
       <feComposite
          in2="result7"
-         id="feComposite5322" />
+         id="feComposite5322"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6600" />
+      <feColorMatrix
+         id="feColorMatrix6602"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6604"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix6606"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend6608"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend6610"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend6612"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend6614"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer6616"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR6618"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend6620"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix6622"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite6624"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend6626"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite6628"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
        y="-0.2"
        width="1.2"
        height="1.4"
        x="-0.1"
-       inkscape:label="Fire"
-       inkscape:menu="Protrusions"
-       inkscape:menu-tooltip="Edges of object are on fire"
+       inkscape:label="Hue to White"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Fades hue progressively to white"
        style="color-interpolation-filters:sRGB;"
        id="filter4286">
       <feMorphology
@@ -5302,7 +8433,94 @@
          id="feComposite4282" />
       <feComposite
          in2="result7"
-         id="feComposite4284" />
+         id="feComposite4284"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5520" />
+      <feColorMatrix
+         id="feColorMatrix5522"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="r"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5524"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="g"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix5526"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="b"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="g"
+         id="feBlend5528"
+         result="minrg"
+         in="r"
+         mode="darken" />
+      <feBlend
+         in2="b"
+         id="feBlend5530"
+         result="p"
+         in="minrg"
+         mode="darken" />
+      <feBlend
+         in2="g"
+         id="feBlend5532"
+         result="maxrg"
+         in="r"
+         mode="lighten" />
+      <feBlend
+         in2="b"
+         id="feBlend5534"
+         result="q"
+         in="maxrg"
+         mode="lighten" />
+      <feComponentTransfer
+         id="feComponentTransfer5536"
+         result="q2"
+         in="q">
+        <feFuncR
+           id="feFuncR5538"
+           slope="0"
+           type="linear" />
+      </feComponentTransfer>
+      <feBlend
+         in2="q2"
+         id="feBlend5540"
+         result="pq"
+         in="p"
+         mode="lighten" />
+      <feColorMatrix
+         id="feColorMatrix5542"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         type="matrix"
+         result="qminp"
+         in="pq" />
+      <feComposite
+         in2="qminp"
+         id="feComposite5544"
+         k3="1"
+         operator="arithmetic"
+         result="qminpc"
+         in="qminp" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend5546"
+         result="result2"
+         mode="screen" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5548"
+         operator="in"
+         in="result2"
+         result="result1" />
     </filter>
     <filter
        y="-0.2"
@@ -5459,7 +8677,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7198092"
-     inkscape:cx="168.31761"
+     inkscape:cx="-60.215173"
      inkscape:cy="561.25984"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
