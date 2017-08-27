@@ -214,7 +214,7 @@ div.translatingCloud2{
 }
 
 div.storm1{
-	background-image: url(images/StormNight1-compressor.png);
+	background-image: url(images/StormNight2-compressor.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
@@ -225,7 +225,7 @@ div.storm2{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: url(images/StormNight2-compressor.png);
+	background-image: url(images/StormNight1-compressor.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
@@ -383,14 +383,14 @@ push_cloud2
 }
 
 @keyframes lightning{
-   0%{opacity:0;}
+  0%{opacity:0;}
    2%{opacity: 1;}
-   4%{opacity: 0;}
+   14%{opacity: 0;}
    35%{opacity: 0;}
    36%{opacity: 1;}
-   48%{opacity: 0;}
+   58%{opacity: 0;}
    84%{opacity: 0;}
-   85%{opacity:1;}
+   95%{opacity:1;}
    100%{opacity:0;}
 }
 
