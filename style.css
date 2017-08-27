@@ -186,8 +186,13 @@ ul li{
 }
 
 .top {
+	z-index: 1;
+	font-size: 120%;
+	color: white;
+	text-shadow: 2px 2px 3px black;
 	position: relative;
-	top: -.2em;
+	top: 95vh;
+	left: 5vh;
 	cursor: pointer;
 }
 
@@ -315,7 +320,9 @@ img.photoMe{
 }
 
 footer{
-	position: relative
+	position: relative;
+	top: 88vh;
+	left: 0;
 	color: black;
 	background: darkgrey; 
 	width: 100%;
