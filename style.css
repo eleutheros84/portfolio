@@ -17,10 +17,8 @@ body, header, svg, div, p, a, h1, h2, img, figure, ul, li, footer{
 /* header*/
 body{
 	background-color: black;
-	display: flex;
-	flex-direction: column;
 	font-family: Handlee;
-
+	overflow: hidden;
 }
 
 header{
@@ -178,11 +176,36 @@ ul li{
 			color: darkgrey;
 		}
 
-section#main{
+
+.well {
+	position: relative;
+	overflow: hidden;
+	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
+	display: flex;
+	flex-direction: column;
+}
+
+.top {
+	position: relative;
+	top: -.2em;
+	cursor: pointer;
+}
+
+.panel {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	box-sizing: border-box;
+	cursor: default;
+}
+
+section#home{
 	position: relative;
 	height: 100vh;
 	width: 100%;
-	color: yellow;
+	color: darkgrey;
+	font-family: Handlee!important;
+	text-align: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -330,9 +353,6 @@ footer p{
     100%{transform: translateX(0vw);}
 }
 
-push_cloud2
-
-
 @-webkit-keyframes translating_cloud2{
 	0%{transform: scale(0) translate(80vw, -100vh);}
 	65%{transform: scale(1.5) translate(0%, 0%);}
@@ -344,8 +364,11 @@ push_cloud2
 
 @-moz-keyframes translating_cloud2{
 	0%{transform: scale(0) translate(80vw, -100vh);}
-	90%{transform: scale(1.5) translate(0%, 0%);}
-	100%{transform: scale(1.5);}
+	65%{transform: scale(1.5) translate(0%, 0%);}
+	75%{transform: scale(1.5);}
+	90%{transform: scale(1.5) translateX(70vw);}
+    95%{transform: scale(1.5) translateX(67vw);}
+    100%{transform: scale(1.5) translateX(100vw);}
 }
 
 @keyframes translating_cloud2{
@@ -361,29 +384,29 @@ push_cloud2
 @-webkit-keyframes lightning{
    0%{opacity:0;}
    2%{opacity: 1;}
-   4%{opacity: 0;}
+   14%{opacity: 0;}
    35%{opacity: 0;}
    36%{opacity: 1;}
-   48%{opacity: 0;}
+   58%{opacity: 0;}
    84%{opacity: 0;}
-   85%{opacity:1;}
+   95%{opacity:1;}
    100%{opacity:0;}
 }
 
 @-moz-keyframes lightning{
    0%{opacity:0;}
    2%{opacity: 1;}
-   4%{opacity: 0;}
+   14%{opacity: 0;}
    35%{opacity: 0;}
    36%{opacity: 1;}
-   48%{opacity: 0;}
+   58%{opacity: 0;}
    84%{opacity: 0;}
-   85%{opacity:1;}
+   95%{opacity:1;}
    100%{opacity:0;}
 }
 
 @keyframes lightning{
-  0%{opacity:0;}
+   0%{opacity:0;}
    2%{opacity: 1;}
    14%{opacity: 0;}
    35%{opacity: 0;}
