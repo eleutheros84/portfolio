@@ -293,6 +293,8 @@ img.photoMe{
 
 footer{
 	position: relative;
+	left: 0;
+	bottom: 0;
 	color: black;
 	background: darkgrey; 
 	width: 100%;
