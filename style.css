@@ -23,12 +23,12 @@ body{
 	display: flex;
 	flex-direction: column;
 	font-family: Handlee;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }
 
 .wrapper{
 	position: absolute;
-	overflow-x: hidden;
+	overflow: hidden;
 	width: 100%;
 }
 
