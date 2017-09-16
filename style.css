@@ -16,7 +16,7 @@ body, header, svg, div, p, a, h1, h2, img, figure, ul, li, footer{
 
 /* header*/
 body{
-	width: 100%;
+	width: 100vw;
 	background-color: black;
 	display: flex;
 	flex-direction: column;
@@ -30,7 +30,7 @@ header{
 	justify-content: space-between;
 	font-family: Handlee;
 	z-index: 9;
-	width: 100%;
+	width: 100vw;
 	height: 12vh;
 	position: fixed;
 	top: 0;
