@@ -16,7 +16,7 @@ body, header, svg, div, p, a, h1, h2, img, figure, ul, li, footer{
 
 /* header*/
 body{
-	width: 100%;
+	width: 100vw;
 	background-color: black;
 	display: flex;
 	flex-direction: column;
@@ -423,7 +423,6 @@ footer p{
 	width: 70%;
 	height: auto;
 	box-sizing: border-box;
-	overflow: hidden;
 	}
 
 	div.home1{
