@@ -423,6 +423,7 @@ footer p{
 	width: 70%;
 	height: auto;
 	box-sizing: border-box;
+	overflow: hidden;
 	}
 
 	div.home1{
