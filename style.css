@@ -14,6 +14,10 @@ body, header, svg, div, p, a, h1, h2, img, figure, ul, li, footer{
 	padding: 0;
 }
 
+html{
+	overflow-x: hidden;
+}
+
 /* header*/
 body{
 	width: 100vw;
