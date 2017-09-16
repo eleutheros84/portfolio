@@ -16,12 +16,12 @@ body, header, svg, div, p, a, h1, h2, img, figure, ul, li, footer{
 
 /* header*/
 body{
-	width: 100vw;
+	width: 100%;
 	background-color: black;
 	display: flex;
 	flex-direction: column;
 	font-family: Handlee;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 header{
@@ -30,7 +30,7 @@ header{
 	justify-content: space-between;
 	font-family: Handlee;
 	z-index: 9;
-	width: 100vw;
+	width: 100%;
 	height: 12vh;
 	position: fixed;
 	top: 0;
@@ -39,9 +39,9 @@ header{
 }
 
 .headerDelay{
+	animation: header_delay 6s linear 0s 1 forwards ;
 	-webkit-animation: header_delay 6s linear 0s 1 forwards ;
 	-moz-animation: header_delay 6s linear 0s 1 forwards;
-	animation: header_delay 6s linear 0s 1 forwards ;
 }
 
 header:hover{
@@ -181,7 +181,7 @@ ul li{
 
 section#home{
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -428,7 +428,6 @@ footer p{
 	div.home1{
 		flex-direction: column;
 		justify-content: center;
-		width: 100vw;
 	}
 
 	div.photoMe{
