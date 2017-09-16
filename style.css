@@ -21,7 +21,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	font-family: Handlee;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 header{
