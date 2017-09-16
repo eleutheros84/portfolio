@@ -14,11 +14,6 @@ body, header, svg, div, p, a, h1, h2, img, figure, ul, li, footer{
 	padding: 0;
 }
 
-html{
-	overflow: hidden;
-}
-
-
 /* header*/
 body{
 	width: 100%;
@@ -26,12 +21,12 @@ body{
 	display: flex;
 	flex-direction: column;
 	font-family: Handlee;
-	overflow-x: hidden;
+	/*overflow: hidden;*/
 }
 
 .wrapper{
 	position: absolute;
-	overflow: hidden;
+	overflow-x: hidden;
 	width: 100%;
 }
 
