@@ -429,6 +429,7 @@ footer p{
 	div.home1{
 		flex-direction: column;
 		justify-content: center;
+		width: 100%;
 	}
 
 	div.photoMe{
