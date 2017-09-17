@@ -9,6 +9,12 @@
     url(fonts/handlee-regular.eot), url(fonts/handlee-regular.woff), url(fonts/handlee-regular.woff2);
 }
 
+@font-face {
+    font-family: Airbag;
+    src: url(fonts/AirbagFree-Regular.ttf),
+    url(fonts/Airbag-Regular.otf);
+}
+
 body, header, svg, div, p, a, h1, h2, img, figure, ul, li, footer{
 	margin: 0;
 	padding: 0;
@@ -20,7 +26,7 @@ body{
 	background-color: black;
 	display: flex;
 	flex-direction: column;
-	font-family: Handlee;
+	font-family: Jura;
 	/*overflow: hidden;*/
 }
 
@@ -34,7 +40,7 @@ header{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	font-family: Handlee;
+	font-family: Stalemate;
 	z-index: 9;
 	width: 100%;
 	height: 12vh;
@@ -166,7 +172,7 @@ ul li{
 		}
 
 		.menuWide li a{
-			width: 18vh;
+			width: auto;
 			display: inline-block;
 			padding: 0 3vh;
 			border-left: 1px solid black;
@@ -179,9 +185,10 @@ ul li{
 
 
 		.menuWide a, .menuHamburger a{
+			font-size: 6vh;
 			text-align: center;
 			text-decoration: none;
-			color: darkgrey;
+			color: white;
 		}
 
 
@@ -214,9 +221,9 @@ img.cloud2{
 }
 
 div.translatingCloud2{	
-	animation: translating_cloud2 6s linear 0s 1 forwards;
 	-webkit-animation: translating_cloud2 6s linear 0s 1 forwards;
 	-moz-animation: translating_cloud2 6s linear 0s 1 forwards;
+	animation: translating_cloud2 6s linear 0s 1 forwards;
 }
 
 div.storm1{
@@ -249,8 +256,19 @@ div.storm2{
 	left: 0;
 	width: 100%;
 	height: 88vh;
+	
+	}
+
+.home1Box{
+	position: absolute;
+	top: 20%;
+	left: 20%;
 	display: flex;
 	flex-direction: row;
+	width: 60%;
+	height: 60%;
+    background-color: rgba(250, 250, 250, 0.1);
+    border-radius: 1%;
 }
 
 div.photoMe{
@@ -262,24 +280,24 @@ div.photoMe{
 img.photoMe{
 	height: 40vh;
 	width: auto;
-	border-radius: 5%;
-	margin-left: 50%;
-	margin-top: 25vh;
+	border-radius: 3%;
+	margin-left: 10%;
+	margin-top: 5vh;
 	box-sizing: border-box;
 }
 
 .home2{
 	display: inline-block;
 	z-index: 2;
-	margin-right: 20%;
-	margin-top: 37vh;
+	margin-right: 10%;
+	margin-top: 17vh;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 }
 
 #home h1, #home h2{
-	font-family: Handlee;
+	font-family: Amaranth;
 	color: white;
 	text-shadow: 3px 3px 3px black, -3px -3px 3px black;
 }
@@ -288,13 +306,19 @@ img.photoMe{
 	width: 100%;
 	height: 10vh;
 	text-align: center;
-	font-size: 4.2vh;
+	font-size: 8.2vh;
+	font-family: Stalemate;
 }
 
 #home h2{
 	width: 100%;
 	height: 10vh;
 	text-align: center;
+}
+
+.home2 h1 span{
+	color: black;
+	text-shadow: 3px 3px 3px white, -3px -3px 3px white;
 }
 
 footer{
@@ -338,7 +362,7 @@ footer p{
 
 @-webkit-keyframes translating_cloud2{
 	0%{transform: scale(0) translate(80vw, -100vh);}
-	65%{transform: scale(1.5) translate(0%, 0%);}
+	65%{transform: scale(1.5) translate(0, 0);}
 	75%{transform: scale(1.5);}
 	90%{transform: translateX(70vw);}
     95%{transform: translateX(67vw);}
@@ -432,9 +456,16 @@ footer p{
 	}
 
 	div.home1{
+		width: 100%;
+	}
+
+	div.home1Box{
+		width: 92%;
+		height: 90%;
+		left: 4%;
+		top: 2%;
 		flex-direction: column;
 		justify-content: center;
-		width: 100%;
 	}
 
 	div.photoMe{
