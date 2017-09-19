@@ -313,9 +313,8 @@ img.photoMe{
 #aboutMe{
 	display: flex;
 	flex-direction: row;
-	position: absolute;
-	top: 100vh;
-	left: 0;
+	position: relative;
+	margin-top: -100vh;
     height: 100vh;
 	width: 100%;
 	background-color: grey;
@@ -340,7 +339,6 @@ div .chronoList{
 .skills{
 	width: 50%;
 	height: 100vh;
-
 }
 
 .skillsSlide{
@@ -531,7 +529,22 @@ footer p{
 		padding-top: 3vh !important;
 	}
 
+	#aboutMe{
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+	}
+
 	div .chronoList, div .skills{
 		width: 100%;
+		height: 50vh;
+	}
+
+	div .skillsSlide{
+		position: absolute;
+		left: 8%;
+		top: 55vh;
+		width: 84%;
+		height: 40vh;
 	}
 }
