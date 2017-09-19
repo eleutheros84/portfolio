@@ -27,7 +27,6 @@ body{
 	display: flex;
 	flex-direction: column;
 	font-family: Jura;
-	/*overflow: hidden;*/
 }
 
 .wrapper{
@@ -54,16 +53,6 @@ header{
 	animation: header_delay 6s linear 0s 1 forwards ;
 	-webkit-animation: header_delay 6s linear 0s 1 forwards ;
 	-moz-animation: header_delay 6s linear 0s 1 forwards;
-}
-
-header:hover{
-	/*background-color: rgba(250, 250, 250, 0.6);*/
-}
-
-.headerContainer{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 }
 
 .navCloud{
@@ -144,7 +133,7 @@ ul li{
 			background-color: rgba(0, 0, 0, 0.9);
 			color: white;
 			transition: 0.5s;	
-			padding-top: 30vh;
+			padding-top: 20vh;
 			box-sizing: border-box;
 		}
 
@@ -177,10 +166,6 @@ ul li{
 			padding: 0 3vh;
 			border-left: 1px solid black;
 			box-sizing: border-box;
-		}
-
-.menuWide ul:hover, .menuHamburger ul:hover{
-			background-color: white;
 		}
 
 
@@ -282,21 +267,25 @@ img.photoMe{
 	width: auto;
 	border-radius: 3%;
 	margin-left: 10%;
-	margin-top: 5vh;
+	margin-top: 6vh;
 	box-sizing: border-box;
 }
 
 .home2{
 	display: inline-block;
 	z-index: 2;
-	margin-right: 10%;
-	margin-top: 17vh;
+	position: absolute;
+	left: 50%;
+	top: 35%;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 }
 
 #home h1, #home h2{
+	padding-top: 3vh;
+	box-sizing: border-box;
+	width: auto;
 	font-family: Amaranth;
 	color: white;
 	text-shadow: 3px 3px 3px black, -3px -3px 3px black;
@@ -304,16 +293,17 @@ img.photoMe{
 
 #home h1{
 	width: 100%;
-	height: 10vh;
-	text-align: center;
-	font-size: 8.2vh;
+	text-align: left;
+	font-size: 6.2vh;
 	font-family: Stalemate;
 }
 
 #home h2{
+	font-size: 3.8vh;
 	width: 100%;
-	height: 10vh;
-	text-align: center;
+	text-align: left;
+	padding-left: 0.3vw;
+	box-sizing: border-box;
 }
 
 .home2 h1 span{
@@ -461,9 +451,9 @@ footer p{
 
 	div.home1Box{
 		width: 92%;
-		height: 90%;
+		height: 96%;
 		left: 4%;
-		top: 2%;
+		top: 0%;
 		flex-direction: column;
 		justify-content: center;
 	}
@@ -475,16 +465,26 @@ footer p{
 	}
 
 	img.photoMe{
-		width: 46%;
+		width: 72%;
 		height: auto;
-		margin: 0 28%;
-		margin-top: 15vh;
+		margin: 0 14%;
+		margin-top: 10vh;
 	}
 
 	div.home2{
+		position: relative;
+		top: 0;
+		left: 0;
 		margin: 0;
-		padding-top: 4vh;
+		padding-top: 3vh;
+		box-sizing: border-box;
 		width: 100%;
 		height: auto;
+	}
+
+	.home2 h1, .home2 h2{
+		text-align: center !important;
+		padding: 0 !important;
+		padding-top: 3vh !important;
 	}
 }
