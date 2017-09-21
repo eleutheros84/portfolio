@@ -317,12 +317,15 @@ img.photoMe{
 	margin-top: -100vh;
     height: 100vh;
 	width: 100%;
-	background-color: grey;
+	background-color: rgb(100, 100, 100);
 	color: black;
 	overflow: hidden;
 }
 
 div .chronoList{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	font-weight: bolder;
 	width: 50%;
 	height: 100vh;
@@ -348,7 +351,18 @@ div .chronoList{
 	width: 25vw;
 	height: 50vh;
 	background-color: white;
-	padding-top: 12vh;
+	margin-top: 12vh;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.skillsSlide img{
+	width: auto;
+	height: 40vh;
+	padding: 1vh;
+	padding-top: 6vh;
 	box-sizing: border-box;
 }
 
@@ -532,18 +546,18 @@ footer p{
 	#aboutMe{
 		display: flex;
 		flex-direction: column;
-		height: 100vh;
+		height: 200vh;
 	}
 
 	div .chronoList, div .skills{
 		width: 100%;
-		height: 50vh;
+		height: 100vh;
 	}
 
 	div .skillsSlide{
 		position: absolute;
 		left: 8%;
-		top: 55vh;
+		top: 130vh;
 		width: 84%;
 		height: 40vh;
 	}
