@@ -51,9 +51,9 @@ header{
 }
 
 .headerDelay{
-	animation: header_delay 6s linear 0s 1 forwards ;
-	-webkit-animation: header_delay 6s linear 0s 1 forwards ;
-	-moz-animation: header_delay 6s linear 0s 1 forwards;
+	animation: header_delay 4s linear 0s 1 forwards ;
+	-webkit-animation: header_delay 4s linear 0s 1 forwards ;
+	-moz-animation: header_delay 4s linear 0s 1 forwards;
 }
 
 .navCloud{
@@ -206,9 +206,9 @@ img.cloud2{
 }
 
 div.translatingCloud2{	
-	-webkit-animation: translating_cloud2 6s linear 0s 1 forwards;
-	-moz-animation: translating_cloud2 6s linear 0s 1 forwards;
-	animation: translating_cloud2 6s linear 0s 1 forwards;
+	-webkit-animation: translating_cloud2 4s linear 0s 1 forwards;
+	-moz-animation: translating_cloud2 4s linear 0s 1 forwards;
+	animation: translating_cloud2 4s linear 0s 1 forwards;
 }
 
 div.storm1{
@@ -269,6 +269,7 @@ img.photoMe{
 	margin-left: 10%;
 	margin-top: 6vh;
 	box-sizing: border-box;
+	box-shadow: 3px 3px 6px rgba(250, 250, 250, 0.2);
 }
 
 .home2{
@@ -307,7 +308,7 @@ img.photoMe{
 
 .home2 h1 span{
 	color: black;
-	text-shadow: 3px 3px 3px white, -3px -3px 3px white;
+	text-shadow: 1px 1px 2px white, -1px -1px 2px white;
 }
 
 #aboutMe{
@@ -317,7 +318,7 @@ img.photoMe{
 	margin-top: -100vh;
     height: 100vh;
 	width: 100%;
-	background-color: rgb(100, 100, 100);
+	background-color: rgb(200, 200, 200);
 	color: black;
 	overflow: hidden;
 }
@@ -327,6 +328,7 @@ div .chronoList{
 	flex-direction: column;
 	justify-content: center;
 	font-weight: bolder;
+	font-size: 3vh;
 	width: 50%;
 	height: 100vh;
 	padding-top: 12vh;
@@ -350,14 +352,15 @@ div .chronoList{
 	top: 25%;
 	width: 25vw;
 	height: 50vh;
-	background-color: white;
+	background-color: rgb(0, 0, 0);
 	margin-top: 12vh;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	opacity: 0;
-	border-radius: 1%;
+	border-radius: 2%;
+	box-shadow: -3px 3px 0 white;
 }
 
 .slide1{
@@ -400,10 +403,12 @@ div .chronoList{
 	width: auto;
 	height: 40vh;
 	margin: 0 auto;
-	padding: 1vh;
+	padding: 2vh;
 	box-sizing: border-box;
 	transform: rotateY(180deg);
-	font-size: 30vh;
+	font-size: 25vh;
+	color: rgb(200, 200, 200);
+	text-shadow: 2px 2px 0 white;
 }
 
 footer{
