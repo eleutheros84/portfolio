@@ -247,13 +247,12 @@ div.storm2{
 .home1Box{
 	position: absolute;
 	top: 20%;
-	left: 20%;
+	left: 25%;
 	display: flex;
 	flex-direction: row;
-	width: 60%;
+	width: 50%;
 	height: 60%;
-    background-color: rgba(250, 250, 250, 0.1);
-    border-radius: 1%;
+    background-color: rgba(250, 250, 250, 1);
 }
 
 div.photoMe{
@@ -295,7 +294,7 @@ img.photoMe{
 #home h1{
 	width: 100%;
 	text-align: left;
-	font-size: 6.2vh;
+	font-size: 7.2vh;
 	font-family: Stalemate;
 }
 
@@ -313,12 +312,12 @@ img.photoMe{
 
 #aboutMe{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	justify-content: center;
 	position: relative;
 	margin-top: -100vh;
     height: 100vh;
 	width: 100%;
-	background-color: rgb(200, 200, 200);
 	color: black;
 	overflow: hidden;
 }
@@ -330,7 +329,9 @@ div .chronoList{
 	font-weight: bolder;
 	font-size: 3vh;
 	width: 50%;
-	height: 100vh;
+	height: 60%;
+	background-color: rgb(250, 250, 250);
+	margin: auto;
 	padding-top: 12vh;
 	box-sizing: border-box;
 }
@@ -341,7 +342,19 @@ div .chronoList{
 	text-align: center;
 }
 
+section #skills{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+    height: 100vh;
+	width: 100%;
+	color: black;
+	overflow: hidden;
+}
+
 .skills{
+	position: relative;
 	width: 50%;
 	height: 100vh;
 }
@@ -414,7 +427,7 @@ div .chronoList{
 footer{
 	position: relative;
 	color: black;
-	background: darkgrey; 
+	background: white; 
 	width: 100%;
 	min-height: 12vh;
 }
@@ -581,9 +594,9 @@ footer p{
 
 	div.home1Box{
 		width: 92%;
-		height: 96%;
+		height: 90%;
 		left: 4%;
-		top: 0%;
+		top: 4%;
 		flex-direction: column;
 		justify-content: center;
 	}
@@ -595,10 +608,9 @@ footer p{
 	}
 
 	img.photoMe{
-		width: 60%;
+		width: 80%;
 		height: auto;
-		margin: 0 20%;
-		margin-top: 10vh;
+		margin: 0 10%;
 	}
 
 	div.home2{
@@ -606,7 +618,6 @@ footer p{
 		top: 0;
 		left: 0;
 		margin: 0;
-		padding-top: 3vh;
 		box-sizing: border-box;
 		width: 100%;
 		height: auto;
@@ -618,11 +629,12 @@ footer p{
 		padding-top: 3vh !important;
 	}
 
-	#aboutMe{
+	#aboutMe, #skills{
 		display: flex;
 		flex-direction: column;
-		height: 200vh;
+		height: 100vh;
 	}
+
 
 	div .chronoList, div .skills{
 		width: 100%;
@@ -632,7 +644,7 @@ footer p{
 	div .skillsSlide{
 		position: absolute;
 		left: 8%;
-		top: 130vh;
+		top: 30vh;
 		width: 84%;
 		height: 40vh;
 	}
