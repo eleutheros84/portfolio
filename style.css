@@ -232,8 +232,8 @@ div.storm1{
 	background-image: url(images/StormNight2-compressor.png);
 	background-repeat: repeat-y;
 	background-size: cover;
-	height: 300vh;
-	width: 100%;
+	height: 100%;
+	width: 100vw;
 }
 
 div.storm2{
@@ -243,7 +243,7 @@ div.storm2{
 	background-image: url(images/StormNight1-compressor.png);
 	background-repeat: repeat-y;
 	background-size: cover;
-	height: 300vh;
+	height: 100%;
 	width: 100%;
 	opacity: 1;
 	animation:4s linear 0s normal forwards infinite lightning;
@@ -336,9 +336,16 @@ img.photoMe{
 	width: 100%;
 	color: black;
 	overflow: hidden;
+	margin-top: 12vh !important;
+	box-sizing: border-box;
 }
 
 div .chronoList{
+	height: 88vh;
+	width: 100%;
+}
+
+.chronoList ul{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -347,37 +354,31 @@ div .chronoList{
 	width: 50%;
 	height: 60%;
 	background-color: rgb(250, 250, 250);
-	margin: auto;
-	padding-top: 12vh;
+	margin-top: 11.5%;
+	margin-left: 25%;
 	box-sizing: border-box;
 }
-
 .chronoList ul li{
 	padding: 2vh;
 	box-sizing: border-box;
 	text-align: center;
-}
+	}
 
-section #skills{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;
+section#skills{
 	position: relative;
-    height: 100vh;
+    height: 100vh !important;
 	width: 100%;
 	color: black;
-	overflow: hidden;
+	margin-top: 12vh;
+	box-sizing: border-box;
 }
 
 .skillsWrapper{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-content: center;
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	height: 88vh;
 }
 
 div .skills{
@@ -389,8 +390,8 @@ div .skills{
 	width: 50%;
 	height: 60%;
 	background-color: rgb(250, 250, 250);
-	margin: auto;
-	padding-top: 12vh;
+	margin-top: 14.5%;
+	margin-left: 25%;
 	box-sizing: border-box;
 }
 
@@ -673,10 +674,10 @@ footer p{
 	}
 
 
-	div .chronoList, div .skills{
+	.chronoList ul, div .skills{
 		width: 92%;
 		height: 82%;
-		left: 4%;
+		margin-left: 4%;
 		margin-top: 14vh;
 	}
 
