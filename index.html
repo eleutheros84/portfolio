@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head class="enhanced">
 	<title>{a.dev} portfolio</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
@@ -21,7 +21,7 @@
 
 	<header class="headerDelay">
 
-		<div class="navCloud floatingCloud1"><img id="headerCloud1" src="images/CloudGrey1.svg"></div>
+		<div class="navCloud floatingCloud1"><a href="#"><img id="headerCloud1" src="images/CloudGrey1.svg"></a></div>
 	
 		<nav class="hamburgerContainer" onclick="myFunction(this)">
 			<div class="bar1"></div>
@@ -31,7 +31,6 @@
 			<ul class="menuHamburger">
 			    <li><a href="#">Home</a></li>
 				<li><a href="#aboutMe">About Me</a></li>
-				<li><a href="#skills">Skills</a></li>
 				<li><a href="#portfolio">Portfolio</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
@@ -40,7 +39,6 @@
 		<ul class="menuWide">
 			<li><a href="#">Home</a></li>
 			<li><a href="#aboutMe">About Me</a></li>
-			<li><a href="#skills">Skills</a></li>
 			<li><a href="#portfolio">Portfolio</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
@@ -52,7 +50,7 @@
 		</div>
 		
 		<div class="home1 headerDelay">
-			<div class="home1Box">
+			<div class="home1Box revealer">
 				<div class="photoMe"><img src="images/myPic.jpeg" class="photoMe"></div>
 				<div class="home2">
 					<h1 class="">{<span>A</span>lice <span>D</span>ransfield<span>}</span></h1>
@@ -64,7 +62,7 @@
 
 	<section id="aboutMe">
 		<div class="chronoList">
-			<ul>
+			<ul class="revealer">
 				<li>
 					One day I just finally decided to try that one thing I dreamed of but thought unattainable... Computer Science. <br>I started Harvard's CS50 online course, and I loved it !
 				</li>
@@ -134,6 +132,7 @@
 	<footer><p>&copy;2017 Alice Dransfield</p></footer>
 
 	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="activeViewport.js"></script>
 </div>
 </body>
 </html>
